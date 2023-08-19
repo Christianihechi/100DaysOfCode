@@ -8,7 +8,7 @@ rock = '''
         \//(____)
 ------\     (__)
        `-----"
-
+Rock
 '''
 paper = '''
            ___..__
@@ -18,6 +18,7 @@ paper = '''
  ___        '--...__"";
     `-..__ '"---..._;"
           """"----'    
+Paper
 '''
 scissors = '''
   _       ,/'
@@ -25,10 +26,20 @@ scissors = '''
    _  ::
   (_)'  `\.
            `\.
+Scissors
 '''
 
+game_images = [rock, paper, scissors]
 user_choice = int(input("Enter your choice here: "))
+if user_choice >= 3 or user_choice < 0:
+    print("Opps! You entered an invalid number! Enter 0, 1, or 2.")
+else:
+    print("Your choice")
+    print(game_images[user_choice])
+
 computer_choice = random.randint(0, 2)
+print("Computer choice")
+print(game_images[computer_choice])
 
 if user_choice == computer_choice:
     print("It's a Draw ⚖️")
@@ -53,24 +64,3 @@ elif user_choice == 2 and computer_choice == 0:
 elif user_choice == 2 and computer_choice == 1:
     print("You Win 🎉🏆")
     print("Verdict: ✂️ can cut 🧻")
-
-print()
-if user_choice == 0:
-    print("User |> Rock")
-    print(rock)
-elif user_choice == 1:
-    print("User |> Paper")
-    print(paper)
-else:
-    print("User |> Scissors")
-    print(scissors)
-
-if computer_choice == 0:
-    print("Computer |> Rock")
-    print(rock)
-elif computer_choice == 1:
-    print("Computer |> Paper")
-    print(paper)
-else:
-    print("Computer |> Scissors")
-    print(scissors)
