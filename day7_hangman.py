@@ -5,7 +5,7 @@ word_list = wl
 random_words = random.choice(word_list)
 chosen_word = random_words
 print(logo)
-print(f"Random word is {chosen_word}")
+# print(f"Random word is {chosen_word}")
 
 # Initialize display with underscores for each letter in chosen_word
 display = ["_" for each_letter in chosen_word]
