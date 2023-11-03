@@ -39,7 +39,7 @@ while not end_of_game:
     for position, word_letter in enumerate(chosen_word):
         if word_letter == guess and display[position] == "_":
             display[position] = word_letter
-    print(" ".join(display)
+    print(" ".join(display))
 
     # Check if all letters have been guessed
     if "_" not in display:
